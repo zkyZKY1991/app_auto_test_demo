@@ -4,3 +4,9 @@
 # @Email:475854688@qq.com
 # @File:basepage.py
 # @Software:PyCharm
+import logging
+
+class LoggerHandler(logging.Logger):
+    def __init__(self, logger_name="root", logger_level="DEBUG",
+                 fmt=""):
+        pass
