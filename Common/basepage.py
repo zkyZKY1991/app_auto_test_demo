@@ -4,9 +4,22 @@
 # @Email:475854688@qq.com
 # @File:basepage.py
 # @Software:PyCharm
-import logging
+from appium import webdriver
+from selenium.webdriver import remote
 
-class LoggerHandler(logging.Logger):
-    def __init__(self, logger_name="root", logger_level="DEBUG",
-                 fmt=""):
+
+class AppBasePage:
+    def __init__(self, driver:remote):
+        self.driver = driver
+
+    def get_screenshot(self):
+        pass
+
+    def my_logger(self):
+        pass
+
+    def get_element(self):
+        pass
+
+    def click_element(self):
         pass
