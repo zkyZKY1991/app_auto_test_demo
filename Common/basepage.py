@@ -4,18 +4,28 @@
 # @Email:475854688@qq.com
 # @File:basepage.py
 # @Software:PyCharm
+import datetime
+import os
+import time
+from datetime import date
+
 from appium import webdriver
 from selenium.webdriver import remote
+from Settings.configs import Config
+from Common.logger_handler import LoggerHandler
 
 
 class AppBasePage:
-    def __init__(self, driver:remote):
+    def __init__(self, driver: remote):
         self.driver = driver
 
     def get_screenshot(self):
         pass
 
     def my_logger(self):
+        time_now = datetime.datetime.time()
+        filename = os.path.join(Config.log_path(), time_now)
+        logger_handler = LoggerHandler("zky", "DEBUG", filename=filename)
         pass
 
     def get_element(self):
@@ -23,3 +33,7 @@ class AppBasePage:
 
     def click_element(self):
         pass
+
+
+if __name__ == '__main__':
+    pass
